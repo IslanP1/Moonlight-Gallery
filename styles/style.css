@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap");
+
+::-webkit-scrollbar {
+  width: .5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 10px;
+  height: 10px;
+  border-radius: .5rem;
+  background-color: #111111;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #151515;
+}
+
+header {
+  display: flex;
+  padding: 1rem 0;
+}
+
+header .title {
+  display: flex;
+  gap: 2rem;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto;
+}
+
+header .title h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  color: #fff;
+}
+
+header .title img {
+  width: 6rem;
+}
+
+.effect-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+@keyframes ballsAnim {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100vw);
+  }
+}
+
+.effect-container .balls {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #fff;
+  animation-name: ballsAnim;
+  animation-duration: 2s;
+  animation-delay: var(--ball-delay);
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.images img {
+  flex: 1;
+  object-fit: cover;
+  width: 40%;
+  margin: 0;
+  padding: 0.2rem;
+  border-radius: 0.6rem;
+  z-index: 9999999;
+}
+
+.buttons {
+  flex-direction: row;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+.buttons button {
+  height: 2.6rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  font-family: "poppins", sans-serif;
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.25s ease-in-out;
+}
+
+.buttons button:hover {
+  color: #fff;
+  background-color: #151515;
+}
+
+.buttons button:active {
+  background-color: #7e0404;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #111111;
+  padding: 1rem;
+  align-items: center;
+}
+
+.footer p {
+  color: #c0bbbd;
+  font-size: 1rem;
+  font-family: "poppins", sans-serif;
+}
+
+.footer .icones {
+  padding-top: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.footer a {
+  color: inherit;
+}
+
+.footer i {
+  background-color: #fff;
+  font-size: 2rem;
+  border-radius: 50%;
+}
+
+@media (max-width: 350px) {
+  header .title img {
+    display: none;
+  }
+}
+
+
+@media (max-width: 450px) {
+  header .title h1 {
+    display: block;
+    text-align: center;
+  }
+}
+
+@media (max-width: 544px) {
+  header .title h1 {
+    font-size: 1.8rem;
+  }
+
+  header .title img {
+    width: 4rem;
+  }
+}
