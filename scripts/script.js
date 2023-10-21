@@ -27,7 +27,7 @@ function handleApi(urlModified) {
   fetch(urlModified)
     .then(api => api.json())
     .then(json => renderImage(json))
-    .catch(error => alert(error))
+    .catch(error => alert("Erro do servidor, avance para a próxima página ou para anterior!"));
   numPage.textContent = page;
 }
 
