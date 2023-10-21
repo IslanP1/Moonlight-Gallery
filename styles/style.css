@@ -101,10 +101,11 @@ main {
   align-items: center;
   margin: 0 auto;
   padding: 1rem 0;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .buttons button {
+  margin: 0 auto;
   height: 2.6rem;
   background-color: #fff;
   border-radius: 0.5rem;
