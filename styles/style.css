@@ -95,9 +95,13 @@ main {
 }
 
 .buttons {
+  display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
+  align-items: center;
   margin: 0 auto;
   padding: 1rem 0;
+  gap: 2rem;
 }
 
 .buttons button {
@@ -114,11 +118,18 @@ main {
 
 .buttons button:hover {
   color: #fff;
-  background-color: #151515;
+  background-color: #111111;
 }
 
 .buttons button:active {
-  background-color: #7e0404;
+  color: #000;
+  background-color: #fff;
+}
+
+.buttons p {
+  color: #fff;
+  font-size: 1.2rem;
+  font-family: "poppins", sans-serif;
 }
 
 .footer {
@@ -156,7 +167,6 @@ main {
     display: none;
   }
 }
-
 
 @media (max-width: 450px) {
   header .title h1 {

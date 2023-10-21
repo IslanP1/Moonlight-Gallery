@@ -5,6 +5,7 @@ const divImages = document.querySelector(".images");
 const buttonNext = document.querySelector("#buttonNext");
 const buttonBack = document.querySelector("#buttonBack");
 const balls = document.querySelectorAll(".balls");
+const numPage = document.querySelector(".page");
 
 
 buttonNext.addEventListener("click", () => {
@@ -25,7 +26,9 @@ buttonBack.addEventListener("click", () => {
 function handleApi(urlModified) {
   fetch(urlModified)
     .then(api => api.json())
-    .then(json => renderImage(json));
+    .then(json => renderImage(json))
+    .catch(error => alert(error))
+  numPage.textContent = page;
 }
 
 function renderImage(response) {
@@ -54,5 +57,6 @@ const getRandomNumber = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 balls.forEach(ball => ball.style = `--ball-delay:${getRandomNumber(0, 1000)}ms`)
+
 
 handleApi(urlBase);
